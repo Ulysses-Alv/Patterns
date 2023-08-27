@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class SpawnerPooling : MonoBehaviour
+public class SpawnerPoolingExample : MonoBehaviour
 {
     [SerializeField] GameObject cube;
     [SerializeField] GameObject sphere;
@@ -45,7 +45,7 @@ public class SpawnerPooling : MonoBehaviour
         return vector;
     }
 
-    IEnumerator DeSpawn(GameObject primitive, GameObject go, float time)
+    IEnumerator DeSpawn(GameObject primitive, GameObject go, float time) //you need the primitive and the GO.
     {
         yield return new WaitForSeconds(time);
         ObjectPooling.RecicleObject(primitive, go);
