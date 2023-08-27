@@ -1,13 +1,16 @@
 using UnityEngine;
-public class Facade : MonoBehaviour 
+namespace FacadePattern
 {
-    [SerializeField] FinalConsumer finalConsumer;
-    public void DoOne()
+    public class Facade : MonoBehaviour
     {
-        finalConsumer.ActionOne();
-    }
-    public void DoTwo()
-    {
-        finalConsumer.ActionTwo();
+        [SerializeField] Consumible finalConsumer;
+        public void DoOne()
+        {
+            finalConsumer.ActionOne();
+        }
+        public void DoTwo()
+        {
+            finalConsumer.ActionTwo();
+        }
     }
 }

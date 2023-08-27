@@ -1,21 +1,25 @@
 ﻿using UnityEngine;
-public class ObjectFactory
+
+namespace FactoryPattern
 {
-    public readonly FactoryConfiguration factoryConfiguration;
-
-    public ObjectFactory(FactoryConfiguration powerUpsConfiguration)
+    public class ObjectFactory
     {
-        this.factoryConfiguration = powerUpsConfiguration;
-    }
+        public readonly FactoryConfiguration factoryConfiguration;
 
-    public ObjectExample CreatePrefab(string id)
-    {
-        ObjectExample prefab = factoryConfiguration.GetObjectPrefabById(id);
+        public ObjectFactory(FactoryConfiguration powerUpsConfiguration)
+        {
+            this.factoryConfiguration = powerUpsConfiguration;
+        }
 
-        return Object.Instantiate(prefab);
-    }
-    public ObjectExample GetObjectExample(string id)
-    {
-        return factoryConfiguration.GetObjectPrefabById(id);
+        public ObjectExample CreatePrefab(string id)
+        {
+            ObjectExample prefab = factoryConfiguration.GetObjectPrefabById(id);
+
+            return Object.Instantiate(prefab);
+        }
+        public ObjectExample GetObjectExample(string id)
+        {
+            return factoryConfiguration.GetObjectPrefabById(id);
+        }
     }
 }

@@ -1,11 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class AdapterExample : IAdapterExample
+namespace adapter.pattern.vlyx
 {
-    public string Example()
+    public class AdapterExample : IAdapterExample
     {
-        return AdaptedClass.nameExample;
+        public string Example()
+        {
+            return AdaptedClass.nameExample;
+        }
     }
 }

@@ -1,7 +1,10 @@
-﻿public class Installer
+﻿namespace adapter.pattern.vlyx
 {
-    void Install()
+    public class Installer
     {
-        var user = new User(new AdapterExample());
+        void Install()
+        {
+            var user = new User(new AdapterExample());
+        }
     }
 }

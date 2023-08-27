@@ -1,7 +1,10 @@
 ﻿using UnityEngine;
 using UniRx;
 
-public class Enemy : MonoBehaviour
+namespace ObserverPattern
 {
-    public ReactiveProperty<int> hp = new ReactiveProperty<int>(100);
+    public class Enemy : MonoBehaviour
+    {
+        public ReactiveProperty<int> hp = new ReactiveProperty<int>(100);
+    }
 }

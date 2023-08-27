@@ -2,15 +2,18 @@
 using UniRx;
 using UnityEngine;
 
-public class TextHP : MonoBehaviour
+namespace ObserverPattern
 {
-    [SerializeField] TextMeshProUGUI textMeshPro;
-    private void Awake()
+    public class TextHP : MonoBehaviour
     {
-        GameObject.FindGameObjectWithTag("Enemy").GetComponent<Enemy>().hp.Subscribe(UpdateText);
-    }
-    void UpdateText(int health)
-    {
-        textMeshPro.text = health.ToString();
+        [SerializeField] TextMeshProUGUI textMeshPro;
+        private void Awake()
+        {
+            GameObject.FindGameObjectWithTag("Enemy").GetComponent<Enemy>().hp.Subscribe(UpdateText);
+        }
+        void UpdateText(int health)
+        {
+            textMeshPro.text = health.ToString();
+        }
     }
 }

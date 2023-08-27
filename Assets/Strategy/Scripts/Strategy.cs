@@ -1,4 +1,7 @@
-public interface Strategy
+namespace StrategyPattern
 {
-    void ExampleFunction();
+    public interface Strategy
+    {
+        void ExampleFunction();
+    }
 }

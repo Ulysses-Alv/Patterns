@@ -1,11 +1,14 @@
 ﻿using UnityEngine;
 
-public class ConsumerOne : MonoBehaviour
+namespace FacadePattern
 {
-    [SerializeField] Facade facade;
-
-    void ExampleOne()
+    public class ConsumerOne : MonoBehaviour
     {
-        facade.DoOne();
+        [SerializeField] Facade facade;
+
+        void ExampleOne()
+        {
+            facade.DoOne();
+        }
     }
 }

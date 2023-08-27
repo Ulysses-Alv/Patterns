@@ -1,4 +1,7 @@
-﻿public interface IAdapterExample
+﻿namespace adapter.pattern.vlyx
 {
-    string Example();
+    public interface IAdapterExample
+    {
+        string Example();
+    }
 }

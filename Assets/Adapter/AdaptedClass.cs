@@ -1,4 +1,7 @@
-﻿public static class AdaptedClass
+﻿namespace adapter.pattern.vlyx
 {
-    public static string nameExample = "Hola";
+    public static class AdaptedClass
+    {
+        public static string nameExample = "Hola";
+    }
 }

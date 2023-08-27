@@ -1,7 +1,10 @@
-﻿public class StrategyExampleTwo : Strategy
+﻿namespace StrategyPattern
 {
-    public void ExampleFunction()
+    public class StrategyExampleTwo : Strategy
     {
+        public void ExampleFunction()
+        {
 
+        }
     }
 }

@@ -1,5 +1,8 @@
-﻿public class StrategyExampleOne : Strategy
+﻿namespace StrategyPattern
 {
-    public void ExampleFunction() { }
-   
+    public class StrategyExampleOne : Strategy
+    {
+        public void ExampleFunction() { }
+
+    }
 }

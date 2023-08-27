@@ -1,13 +1,16 @@
-﻿public class DecoratorExampleoA : Decorator
+﻿namespace Decorator
 {
-    public DecoratorExampleoA(IComponent component) : base(component)
+    public class DecoratorExampleoA : Decorator
     {
+        public DecoratorExampleoA(IComponent component) : base(component)
+        {
+
+        }
+
+        public override void Operation()
+        {
+            base.Operation();
+        }
 
     }
-
-    public override void Operation()
-    {
-        base.Operation();
-    }
-
 }

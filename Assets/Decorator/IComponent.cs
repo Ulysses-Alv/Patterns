@@ -1,4 +1,7 @@
-﻿public interface IComponent
+﻿namespace Decorator
 {
-    void Operation();
+    public interface IComponent
+    {
+        void Operation();
+    }
 }

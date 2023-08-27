@@ -1,5 +1,9 @@
-﻿public class User
+﻿namespace adapter.pattern.vlyx
 {
-    private readonly IAdapterExample adapterExample;
-    public User(IAdapterExample adapterExample) => this.adapterExample = adapterExample;
+    public class User
+    {
+        private readonly IAdapterExample adapterExample;
+        public User(IAdapterExample adapterExample) => this.adapterExample = adapterExample;
+    }
+
 }

@@ -1,14 +1,17 @@
-﻿public class Consumer
+﻿namespace StrategyPattern
 {
-    Strategy strategy;
-
-    public Consumer(Strategy strategy)
+    public class Consumer
     {
-        this.strategy = strategy;
-    }
+        Strategy strategy;
 
-    public void DoFunction()
-    {
-        strategy.ExampleFunction();
+        public Consumer(Strategy strategy)
+        {
+            this.strategy = strategy;
+        }
+
+        public void DoFunction()
+        {
+            strategy.ExampleFunction();
+        }
     }
 }

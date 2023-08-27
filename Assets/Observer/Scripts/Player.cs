@@ -1,20 +1,23 @@
 using UnityEngine;
 
-public class Player : MonoBehaviour
+namespace ObserverPattern
 {
-    Enemy enemy;
-    void Start()
+    public class Player : MonoBehaviour
     {
-        enemy = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Enemy>();
-    }
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space)) //You should use new Input System.
+        Enemy enemy;
+        void Start()
         {
-            if (enemy.hp.Value < 10) return;
+            enemy = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Enemy>();
+        }
 
-            enemy.hp.Value -= 10;
+        void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Space)) //You should use new Input System.
+            {
+                if (enemy.hp.Value < 10) return;
+
+                enemy.hp.Value -= 10;
+            }
         }
     }
 }
